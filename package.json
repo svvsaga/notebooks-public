@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "node-modules-public": "svvsaga/node-modules-public#v0.3.0"
+  },
+  "scripts": {
+    "prepare": "npx husky install"
+  }
+}
