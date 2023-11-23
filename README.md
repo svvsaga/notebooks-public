@@ -16,28 +16,28 @@ Dette repoet inneholder Jupyter Notebooks som kan kjøres fra Google Colab mot d
 1. Kjør `npm install`, slik at man får installert nyttige git hooks
 1. Det kan være kjekt å kopiere en eksisterende notebook og bruke som
    utgangspunkt for den nye du skal lage
-1. Husk å endre navn også inne i notebookens json, og ikke bare selve filnavnet,
-   slik at feltet `name` matcher filnavnet på notebooken.
+1. Hvis du lagd din notebook basert på en eksisterende notebook, pass på at det ikke står et utdatert navn inne i notebookens json,
+   slik at feltet `name` matcher filnavnet på notebooken. Dette navnet brukes når notebooken lastes opp og vises i Colab.
 
-```
-...
- "metadata": {
-  "colab": {
-   "name": "bigquery:nvdb.curated.tunneler_med_lop.ipynb",
-  },
-...
-```
+   ```
+   ...
+    "metadata": {
+     "colab": {
+      "name": "bigquery:nvdb.curated.tunneler_med_lop.ipynb",
+     },
+   ...
+   ```
 
 
 1. Vær obs på at den første cellen i notebooken må ha med metadata tags, slik at
    papermill klarer å erstatte parameterene i notebooken
 
-```
-...
-   "metadata": {
-    "tags": [
-     "parameters"
-    ]
-   },
-...
-```
+   ```
+   ...
+      "metadata": {
+       "tags": [
+        "parameters"
+       ]
+      },
+   ...
+   ```
